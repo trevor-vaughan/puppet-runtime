@@ -1,7 +1,8 @@
 component "ansicon" do |pkg, settings, platform|
   pkg.version '1.71'
   pkg.md5sum '0e052ad64167f6e57baebcae1b7eef42'
-  pkg.url "#{settings[:buildsources_url]}/ansicon-#{pkg.get_version}.tar.gz"
+  #pkg.url "#{settings[:buildsources_url]}/ansicon-#{pkg.get_version}.tar.gz"
+  pkg.url "https://github.com/adoxa/ansicon/archive/v#{pkg.get_version}.tar.gz"
 
   # This component should only be included on Windows
   pkg.environment "PATH", "$(shell cygpath -u #{settings[:gcc_bindir]}):$(PATH)"
